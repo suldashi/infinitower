@@ -1,0 +1,96 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+#external-controls-toggle {
+	position: fixed;
+	top:0;
+	right:0;
+	width: 40px;
+	height:40px;
+	background: white url("/public/arrow.svg") 100% 100%;
+	cursor: pointer;
+	z-index: 5;
+}
+
+#smobile-controls {
+	display: none;
+}
+
+#external-controls-toggle.enabled {
+	transform: rotate(180deg);
+}
+
+#external-controls {
+	position: fixed;
+	top:0;
+	right:0;
+	width: 200px;
+	padding: 5px;
+	background: white;
+}
+
+#external-controls button {
+	display: block;
+	width: 120px;
+	margin: 5px;
+}
+
+#overlay {
+	position: fixed;
+	top:0;
+	left:0;
+	width: 1920px;
+	height: 1080px;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+#overlay .coord {
+	width: 46px;
+	height: 46px;
+	display: inline-block;
+	color: white;
+	border: 1px dashed white;
+	text-align: center;
+	line-height: 46px;
+	font-size: 10px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#root canvas {
+	width: 100%;
+	border: 0;
+}
+
+@media only screen and (max-device-width: 768px) {
+	#external-controls, #external-controls-toggle {
+		display: none;
+	}
+	.mobile-controls {
+		display: block;
+		position: fixed;
+		height: 100px;
+		width: 50px;
+		bottom: 20px;
+		background: red;
+		z-index: 10;
+	}
+	#mobile-controls-right {
+		right: 20px;
+		background: url("/public/mobile-control-right.png") 100% 100% no-repeat;
+	}
+
+	#mobile-controls-left {
+		left: 20px;
+		background: url("/public/mobile-control-left.png") 100% 100% no-repeat;
+	}
+}

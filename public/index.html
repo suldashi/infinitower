@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="/public/site.css">
+	<script>
+	var gameConfig = {
+	};
+	</script>
+</head>
+<body>
+	<div id="root"></div>
+	<script id="shader" type="shader">
+		varying vec2 vTextureCoord;
+		
+		uniform sampler2D uSampler;
+		uniform float randomRX;
+		uniform float randomRY;
+		uniform float randomBX;
+		uniform float randomBY;
+		uniform float randomGX;
+		uniform float randomGY;
+		void main(void) {
+			vec4 currentColorR = texture2D(uSampler, vTextureCoord + vec2(randomRX, randomRY));
+			vec4 currentColorG = texture2D(uSampler, vTextureCoord + vec2(randomGX, randomGY));
+			vec4 currentColorB = texture2D(uSampler, vTextureCoord + vec2(randomBX, randomBY));
+			if(currentColorR.a != 0.0) {
+				currentColorR = vec4(currentColorR.r, currentColorG.g, currentColorB.b, currentColorR.a);
+			}
+			gl_FragColor = currentColorR;
+		}
+	</script>
+	<div class="mobile-controls" id="mobile-controls-left"></div>
+	<div class="mobile-controls" id="mobile-controls-right"></div>
+	<div id="overlay" class="hidden"></div>
+	<div id="external-controls-toggle"></div>
+	<div id="external-controls" class='hidden'>
+		<button onclick="enableShader()">Shake it baby!</button>
+		<button onclick="swapScene()">Swap scene</button>
+		<button onclick="toggleOverlay()">Toggle Overlay</button>
+	</div>
+	<script src="/public/js/pixi/pixi.min.js"></script>
+	<script src="/public/js/engine.js"></script>
+	<script>
+		let toggle = document.getElementById("external-controls-toggle");
+		let controls = document.getElementById("external-controls");
+		let overlay = document.getElementById("overlay");
+		let isOverlayShown = false;
+		for(var i=0;i<23;i++) {
+			for(var j=0;j<40;j++) {
+				let coord = document.createElement("div");
+				coord.className = "coord";
+				coord.innerText = `${j} / ${i}`;
+				overlay.appendChild(coord);
+			}
+		}
+		let isShown = false;
+		toggle.onclick = () => {
+			if(isShown) {
+				controls.classList.add("hidden");
+				toggle.classList.remove("enabled");
+			}
+			else {
+				controls.classList.remove("hidden");
+				toggle.classList.add("enabled");
+			}
+			isShown = !isShown;
+		}
+
+		function toggleOverlay() {
+			if(isOverlayShown) {
+				overlay.classList.add("hidden");
+			}
+			else {
+				overlay.classList.remove("hidden");
+			}
+			isOverlayShown = !isOverlayShown;
+		}
+	</script>
+</body>
+</html>

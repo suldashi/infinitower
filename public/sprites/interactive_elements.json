@@ -1,0 +1,42 @@
+{"frames": {
+
+"interactive_elements_air_toggle_1.png":
+{
+	"frame": {"x":11,"y":19,"w":6,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":6,"h":6},
+	"sourceSize": {"w":6,"h":6},
+	"anchor": {"x":0.5,"y":0.5}
+},
+"interactive_elements_air_toggle_2.png":
+{
+	"frame": {"x":1,"y":19,"w":8,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":8,"h":8},
+	"sourceSize": {"w":8,"h":8},
+	"anchor": {"x":0.5,"y":0.5}
+},
+"interactive_elements_elevator.png":
+{
+	"frame": {"x":1,"y":1,"w":16,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
+	"sourceSize": {"w":16,"h":16},
+	"anchor": {"x":0.5,"y":0.5}
+}},
+"animations": {
+	"interactive_elements_air_toggle": ["interactive_elements_air_toggle_1.png","interactive_elements_air_toggle_2.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "interactive_elements.png",
+	"format": "RGBA8888",
+	"size": {"w":18,"h":28},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:7c4088c2bc7773b408b4eb9f47a1c344:a572f3638afe7c8b84660f6a7243b697:2fcf1c4701efda0556196fd289ee1448$"
+}
+}

@@ -1,0 +1,69 @@
+{"frames": {
+
+"player_dead.png":
+{
+	"frame": {"x":1,"y":27,"w":14,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":8},
+	"sourceSize": {"w":14,"h":8},
+	"anchor": {"x":0.5,"y":0.5}
+},
+"player_fall.png":
+{
+	"frame": {"x":1,"y":1,"w":14,"h":11},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":11},
+	"sourceSize": {"w":14,"h":11},
+	"anchor": {"x":0.5,"y":0.5}
+},
+"player_idle.png":
+{
+	"frame": {"x":1,"y":65,"w":12,"h":11},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":11},
+	"sourceSize": {"w":12,"h":11},
+	"anchor": {"x":0.5,"y":0.5}
+},
+"player_jump.png":
+{
+	"frame": {"x":1,"y":14,"w":14,"h":11},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":11},
+	"sourceSize": {"w":14,"h":11},
+	"anchor": {"x":0.5,"y":0.5}
+},
+"player_run_1.png":
+{
+	"frame": {"x":1,"y":37,"w":12,"h":12},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":12},
+	"sourceSize": {"w":12,"h":12},
+	"anchor": {"x":0.5,"y":0.5}
+},
+"player_run_2.png":
+{
+	"frame": {"x":1,"y":51,"w":12,"h":12},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":12},
+	"sourceSize": {"w":12,"h":12},
+	"anchor": {"x":0.5,"y":0.5}
+}},
+"animations": {
+	"player_run": ["player_run_1.png","player_run_2.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "player.png",
+	"format": "RGBA8888",
+	"size": {"w":16,"h":77},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:f629a103d6e54047c64634ab61acee31:1f37b12d728f833c7baae5919d594583:86d5339b780aedd87b35e2b7c0a7e11b$"
+}
+}

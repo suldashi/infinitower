@@ -1,0 +1,19 @@
+'use strict';
+
+const express = require("express");
+const app = express();
+const server = require("http").createServer(app);
+const path = require("path");
+
+const port = 8080;
+
+app.use('/public', express.static(path.resolve(__dirname,"..",'public')));
+
+app.get("*",(req,res) => {
+	res.sendFile(path.resolve(__dirname, "..", "public", "index.html"));
+});
+
+app.set("x-powered-by",false);
+
+server.listen(port);
+console.log("started on " + port);
