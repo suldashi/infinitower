@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app/index.js",
-    "prod": "npx gulp prod",
-    "dev": "npx gulp"
+    "prod": "npx webpack --mode=production",
+    "dev": "npx webpack --mode=development",
+    "watch": "npx webpack --mode=development --watch"
   },
   "author": "Ermir Suldashi",
   "license": "MIT",
@@ -21,7 +22,10 @@
     "browserify": "^16.2.3",
     "gulp": "^4.0.2",
     "gulp-terser": "^1.2.0",
+    "terser-webpack-plugin": "^5.1.4",
     "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2"
   }
 }
